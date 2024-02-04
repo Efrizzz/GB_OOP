@@ -2,12 +2,12 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Eagle extends Animal implements Goable, Huntable, Swimble, Flyble {
-    public Eagle(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
+public class Pigeon extends Animal implements Goable, Huntable, Swimble, Flyble {
+    public Pigeon(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
         super(nickName, owner, birthDate, illness);
     }
 
-    public Eagle() {
+    public Pigeon() {
         super();
     }
     @Override
@@ -21,12 +21,13 @@ public class Eagle extends Animal implements Goable, Huntable, Swimble, Flyble {
 
     @Override
     public void swim() {
-        System.out.println("Животное плавает");
+        System.out.println("Животное не плавает");
     }
     @Override
     public void eat() {
-        System.out.println("Орёл ест");
+        System.out.println("Голубь ест");
     }
 
 }
+
 

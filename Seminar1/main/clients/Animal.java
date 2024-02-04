@@ -2,7 +2,7 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
 
     // protected видно в классе и во всех наследниках
     protected String nickName;
@@ -42,49 +42,38 @@ public class Animal {
         this.illness = illness;
     }
 
-    public void lifeCycle() {
-        wakeUp("12:00");
-        hunt();
-        eat();
-        sleep();
-    }
+    // public void lifeCycle() {
+    //     wakeUp("12:00");
+    //     hunt();
+    //     eat();
+    //     sleep();
+    // }
 
     // private void wakeUp() {
     //     wakeUp("12:00");
     // }
 
-    private void wakeUp(String time) {
-        System.out.println("Животное " + nickName + " проснулось в " + time);
-    }
+    // private void wakeUp(String time) {
+    //     System.out.println("Животное " + nickName + " проснулось в " + time);
+    // }
 
     public String getType() {
         return getClass().getSimpleName();
     }
 
-    private void hunt() {
-        System.out.println("Животное охотится!");
-    }
+    // private void hunt() {
+    //     System.out.println("Животное охотится!");
+    // }
 
-    private void eat() {
-        System.out.println("Животное ест!");
-    }
+    public abstract void eat();
 
-    private void sleep() {
-        System.out.println("Животное уснуло!");
-    }
-    public void toGo() {
-        System.out.println("Животное ходит");
-    }
+    // private void sleep() {
+    //     System.out.println("Животное уснуло!");
+    // }
 
-    public void fly() {
-        System.out.println("Животное летит");
-    }
-
-    public void swim() {
-        System.out.println("Животное плавает");
-    }
     @Override
     public String toString() {
         return String.format("nickName = %s, bd = %s, owner = %s, illness = %s", nickName, birthDate, owner, illness);
     }
 }
+
