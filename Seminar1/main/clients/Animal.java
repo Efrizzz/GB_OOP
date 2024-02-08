@@ -10,16 +10,20 @@ public abstract class Animal {
     protected LocalDate birthDate;
     protected Illness illness;
 
+    protected int movementStatistics;
+
+
     // Это пустой конструктор (по умолчанию)
-    public Animal(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
+    public Animal(String nickName, Owner owner, LocalDate birthDate, Illness illness, int movementStatistics) {
         this.nickName = nickName;
         this.owner = owner;
         this.birthDate = birthDate;
         this.illness = illness;
+        this.movementStatistics = movementStatistics;
     }
 
     public Animal() {
-        this("Кличка", new Owner("Хозяин"), LocalDate.now(), new Illness("Болеет"));
+        this("Кличка", new Owner("Хозяин"), LocalDate.now(), new Illness("Болеет"), 0);
     }
 
     public String getNickName() {
@@ -42,38 +46,13 @@ public abstract class Animal {
         this.illness = illness;
     }
 
-    // public void lifeCycle() {
-    //     wakeUp("12:00");
-    //     hunt();
-    //     eat();
-    //     sleep();
-    // }
-
-    // private void wakeUp() {
-    //     wakeUp("12:00");
-    // }
-
-    // private void wakeUp(String time) {
-    //     System.out.println("Животное " + nickName + " проснулось в " + time);
-    // }
 
     public String getType() {
         return getClass().getSimpleName();
     }
 
-    // private void hunt() {
-    //     System.out.println("Животное охотится!");
-    // }
-
-    public abstract void eat();
-
-    // private void sleep() {
-    //     System.out.println("Животное уснуло!");
-    // }
-
     @Override
     public String toString() {
-        return String.format("nickName = %s, bd = %s, owner = %s, illness = %s", nickName, birthDate, owner, illness);
+        return String.format("nickName = %s, bd = %s, owner = %s, illness = %s, Movement statistics = %s ", nickName, birthDate, owner, illness, movementStatistics);
     }
 }
-

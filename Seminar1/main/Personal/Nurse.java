@@ -1,41 +1,18 @@
 package main.Personal;
 
-public class Nurse extends Personal implements Examination {
-    public Nurse(String name, int age) {
-        super(name, age);
-    }
-    public Nurse() {
-        super("", 0);
-    }
-    
+public class Nurse extends BaseMedicalStaff implements Wooble, Сleanble, Procedureable {
     @Override
-    public void work() {
-        System.out.println("Медсестра работает");
+    public void woo() {
+
     }
 
     @Override
-    public void examination() {
-        System.out.println("Медсестра помогает при осмотре");
+    public void clean() {
+
     }
 
     @Override
-    public void surgery() {
-        System.out.println("Медсестра готовится к операции");
-    }
+    public void doProcedure() {
 
-    @Override
-    public void lunchBreak() {
-        System.out.println("Медсестра на обеде");
-    }
-
-    @Override
-    public void dayOff() {
-        System.out.println("Медсестра берёт выходной");
-    }
-
-    @Override
-    public void notAvailable() {
-        System.out.println("Медсестры нет на месте");
     }
 }
-

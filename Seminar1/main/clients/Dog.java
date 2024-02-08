@@ -2,24 +2,23 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Dog extends Animal implements Goable, Huntable, Swimble {
-    public Dog(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
-        super(nickName, owner, birthDate, illness);
+public class Dog extends Animal implements Goable, Swimble  {
+    public Dog(String nickName, Owner owner, LocalDate birthDate, Illness illness, int movementStatistics) {
+        super(nickName, owner, birthDate, illness, movementStatistics); //Сходи в род.класс и вызови 4 параметра
     }
 
     public Dog(){
         super();
     }
+
+
     @Override
-    public void toGo() {
-        System.out.println("Животное ходит");
+    public void go() {
+
     }
+
     @Override
     public void swim() {
-        System.out.println("Животное плавает");
-    }
-    @Override
-    public void eat() {
-        System.out.println("Собака ест");
+
     }
 }
